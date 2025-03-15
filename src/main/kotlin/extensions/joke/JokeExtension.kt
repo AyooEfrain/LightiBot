@@ -16,7 +16,7 @@ class JokeExtension : Extension() {
     )
 
     override suspend fun setup() {
-        ephemeralSlashCommand(::Unit) {
+        ephemeralSlashCommand {
             name = "joke"
             description = "Get a random programming joke"
 
@@ -32,6 +32,4 @@ class JokeExtension : Extension() {
             }
         }
     }
-
-    class Unit : Arguments()
 }
