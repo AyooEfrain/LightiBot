@@ -32,6 +32,7 @@ import extensions.joinleaveupdate.LeaveGuildExtension
 import extensions.joinleaveupdate.NewGuildExtension
 import extensions.notify.NotifyExtension
 import extensions.voicestateupdate.VoiceStateExtension
+import extensions.joke.JokeExtension
 
 @OptIn(PrivilegedIntent::class)
 suspend fun main() {
@@ -64,6 +65,7 @@ suspend fun main() {
             add(::LeaveGuildExtension)
             add(::DeleteChannelExtension)
             add(::CreateChannelExtension)
+            add(::JokeExtension)
 
             help {
                 check { isNotBot() }
